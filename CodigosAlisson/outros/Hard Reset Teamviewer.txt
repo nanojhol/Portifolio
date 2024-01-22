@@ -1,0 +1,9 @@
+Hard Reset Teamviewer
+
+sudo teamviewer --daemon stop
+
+sudo rm /etc/teamviewer/global.conf
+
+sudo reboot
+
+Depois que reiniciar habilita o teamviewer de novo.

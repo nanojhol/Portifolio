@@ -1,0 +1,64 @@
+/* Espaço da grid */
+body{margin: 0}
+
+/* Definindo Grid */
+header{
+    background-color: #812e2e;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Espaço do logo */
+header img {
+    width: 20%;
+    padding-left: 40%;
+    text-align: center;
+}
+
+/* Espaço entre div e img */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo básico da aba */
+.tab {
+    list-style: none;
+    display: flex;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilo do item da aba */
+.tab-item {
+    padding: 25px 50px;
+    transition: background-color 1s;
+}
+
+/* Adiciona um estilo diferente quando o mouse passa por cima do item da aba */
+.tab-item:hover {
+    background-color: #627885;
+    cursor: s-resize;
+}
+
+/* Estilo do conteúdo da aba */
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+/* Exibe o conteúdo da aba ativa */
+.tab-content.active {
+    display: block;
+    background-color: #d1d1d1b3;
+    color: #000000be;
+    text-align: center;
+    justify-content: center;
+    padding: 20% 5%;
+}
+
+
+
+

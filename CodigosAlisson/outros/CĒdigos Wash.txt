@@ -1,0 +1,6 @@
+cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2  // 
+
+tail -f /var/lib/washngo-ole/log -n 100  // LOG mostra as ultimas 100 linhas criadas recentes
+
+sudo reboot // reinicia o sistema da máquina
+

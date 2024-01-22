@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Aba Simples</title>
+</head>
+
+<body>
+
+    <!-- Estrutura da aba -->
+    <ul class="tab">
+        <li class="tab-item" onclick="openTab('tab1')">Aba 1</li>
+        <li class="tab-item" onclick="openTab('tab2')">Aba 2</li>
+        <li class="tab-item" onclick="openTab('tab3')">Aba 3</li>
+    </ul>
+
+    <!-- Conteúdo da aba -->
+    <div id="tab1" class="tab-content active">
+        <h1>Conteúdo da Aba 1</h1>
+        <p>Este é o conteúdo da primeira aba.</p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h1>Conteúdo da Aba 2</h1>
+        <p>Este é o conteúdo da segunda aba.</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h1>Conteúdo da Aba 3</h1>
+        <p>Este é o conteúdo da terceira aba.</p>
+    </div>
+
+    <!-- Script para alternar entre as abas -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game de Música</title>
+</head>
+<body>
+    <h1>Jogo de Música</h1>
+
+    <button id="play-button" onclick="playGame()">Tocar</button>
+
+    <div id="game-container">
+        <button class="note-button" onclick="checkNote(this, 1)">C</button>
+        <button class="note-button" onclick="checkNote(this, 1)">D</button>
+        <button class="note-button" onclick="checkNote(this, 1)">E</button>
+        <button class="note-button" onclick="checkNote(this, 1)">F</button>
+        <button class="note-button" onclick="checkNote(this, 1)">G</button>
+        <button class="note-button" onclick="checkNote(this, 1)">A</button>
+        <button class="note-button" onclick="checkNote(this, 1)">B</button>
+
+        <!-- Adicione tags de áudio ocultas para cada botão -->
+        <audio id="audio-C" src="mp3/C.mp3"></audio>
+        <audio id="audio-D" src="mp3/D.mp3"></audio>
+        <audio id="audio-E" src="mp3/E.mp3"></audio>
+        <audio id="audio-F" src="mp3/F.mp3"></audio>
+        <audio id="audio-G" src="mp3/G.mp3"></audio>
+        <audio id="audio-A" src="mp3/A.mp3"></audio>
+        <audio id="audio-B" src="mp3/B.mp3"></audio>
+    </div>
+
+    <div id="info-container">
+        <p id="correct-info">Botão Correto: <span id="correct-button"></span></p>
+        <p>Acertos: <span id="correct-count">0</span></p>
+        <p>Erros: <span id="wrong-count">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

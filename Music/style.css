@@ -1,0 +1,27 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-container {
+    margin-top: 20px;
+}
+
+.note-button {
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#info-container {
+    margin-top: 20px;
+}
+
+span {
+    font-weight: bold;
+    color: #007bff;
+}

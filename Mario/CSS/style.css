@@ -1,0 +1,82 @@
+* { /* Reset no CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%; /* alteramos de 80 para 100 para pegar a tela toda*/
+    height: 500px;
+    /* border: 1px solid #333; */
+    border-bottom: 20px solid green; /* alterado para criar o chão*/
+    margin: auto;
+    position: relative; /* para as imagens de fora respeitarem a margem */
+    overflow: hidden; /* tudo que sair da tela não aparecera mais */ 
+    background: linear-gradient(#87cee8, #e0f6ff);
+
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0; /* para deixar a imagem fixa em baixo */
+    width: 80px; /* definindo tamanho da imagem */
+    right: 0;
+    /* Chamando Key frame de animacao 
+    Adicionando Infinity cria um loop para animacao 
+    vamos adicionar linear para deixar o movimento sempre igual */
+    animation: pipe-animation 1.5s infinite linear; 
+
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* vamos usar essa classe para chamada do pulo individualmente essa chamada sera diremamente na >>> classe do mario */
+.jump{
+    animation: jump 500ms ease-out; /* Ease- out usamos nesse caso para cair mais suave */   
+}
+
+/* temos que definir a posicao para não alterar outras imagens e posicoes */
+.clouds{
+    position: absolute;
+    width: 800px;
+    animation: clouds 10s infinite linear;
+}
+
+
+/* Criando animacão do cano */
+@keyframes pipe-animation {
+    from {
+        /* estamos colocando o valor do cano negativo para comecar antes do background */
+        right: -80px; 
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* Criando animacão do mario pulando */
+@keyframes jump {
+    /* para essa animacao temos que ter comeco meio e fim 
+    para resolve esse caso vamos usar uma porcentagem no button */
+    0%{   bottom: 0;     }
+    40%{  bottom: 180px; } /* Adicionado apenas para segurar um pouco mais o pulo */
+    50%{  bottom: 180px; }
+    60%{  bottom: 180px; } /* Adicionado apenas para segurar um pouco mais o pulo */
+    100%{ bottom: 0;     }
+
+}
+
+@keyframes clouds {
+    from {
+        /* estamos colocando o valor das nuvens negativo para comecar antes do background */
+        right: -800px; 
+    }
+    to {
+        right: 100%;
+    } 
+    
+}

@@ -1,0 +1,356 @@
+/* Estilo Geral */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;  /* para deixar tudo dentro do quando*/
+    font-family: 'Poppins', sans-serif; /* Google Fonts */
+}
+
+body{
+    background-color: black;
+    height: 100vh; /* VH: ocupa toda a tela disponivel*/
+}
+
+.interface{
+    max-width: 1280px; /* Tamanho maximo*/
+    margin: 0% auto; /* Centralizar o contedo centralizado no quadro disponivel */
+}
+
+.flex{  /* usamos como geral /Main/topo do site */
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;  /* Botão tera 10px em cima e em baxio e as laterais serão de 40px */
+    font-size: 20;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #00ff08; /* Adicionamos um sombra de 8px ao redor do botão */
+    transform: scale(1.10);
+}
+
+.btn-social button{
+    width: 60px; /* largura para definicão do iten */
+    height: 60px; /* altura para definicão do iten */
+    border-radius: 50%; /* definindo 50% do tamanho total da imagem para circulo perfeito */
+    border: 0;
+    background-color: #00ff08;
+    font-size: 30px; /* tamanho do iten */
+    margin: 0 5px; /* aplicando 0 para cima e baixo,  e 5px de distancia nas laterias */
+    transition: .2s;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #00ff08;
+}
+
+
+
+/* Estilo Cabecalio */
+header{
+    width: 100%;
+    position: fixed;
+    padding: 40px 4%; /* 40px em cima e em baixo, e mais 4% para não ficar colado no limite da tela ou borda */
+    /* background-color: rgba(49, 49, 49, 0.732); */
+    background-color: transparent;
+}
+
+
+header > .interface { /* Especificar com ">" que vamos realizar a alteracão somente na classe interface */
+    display: flex; /* vamos deixar um ao lado do outro */
+    align-items: center; /* vamos deixar um ao lado do outro por divisões de bloco ou div */
+    justify-content: space-between; /*  Vamos deixar o maximo de espaco dentro da tela disponivel de cada bloco ou div*/
+}
+
+header a{
+    color: rgba(120, 119, 119, 0.84); /* alteramos a cor da letra / e vamos reduzir a opacidade da cor para destacar com animacão */
+    text-decoration: none; /* retirarndo a linha de sublinhado */
+    display: inline-block; /* com isso convertemos a teg para receber as funcões inline e block para poder receber a animacão */
+    transition: .2s; /* gerando um tempo para não mudar a animacão de uma vez */
+}
+
+header a:hover{ /* Executa um comando quando passa o mouse */
+    color: white; /* alteramos a cor para branca quando passamos o mouse */
+    transform: scale(1.30); /* tranforma / escala - ira dar um zoom ao passar o mouse */
+}
+
+header nav ul{
+    list-style-type: none; /* Retirando as bolinhas do estilo lista */
+}
+
+header nav ul li{
+    display: inline-block; /* Vamos deixar uma informacão do lado da outra alinhado */
+    padding: 0 40px; /* zero espaco em cima e em baixo e 40px de disntacia uma da outra */
+}  
+
+
+
+/* Estilo do Topo do site */
+section.topo-do-site{ /* é necessário o ponto em seguida da secão sem espaco */
+    padding: 80px 4%;
+}
+
+section.topo-do-site .flex{ /* é necessário o ponto em seguida da secão sem espaco e depois expecificar a classe flex*/
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* coloca uma distancia entre itens ou um respiro para dar um melhor espaco */
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 40px;
+    line-height: 40px; /* Redizindo o espacamento do texto */
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #00ff08;
+    font-size: 50px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0; /* Distanciando do texto h1 a cima */
+}
+
+.topo-do-site .img-topo-site > img{ 
+    width: 400px;
+    position: relative; /* para podemor animar a imagem livremente e nicessario definiar a posicão */
+    animation: flutuar 2s ease-in-out infinite alternate; /* chamando kyframe, chamando classe:Flutuar, definindo tempo:2s, definindo velocidade, vamos deixar em loop, e por fim vamos alternar os estados, de 0 a 100 de 100 para 0*/
+}
+
+@keyframes flutuar{ /* Animando imagem da foto */
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+
+/* Estilo Especialidades */
+section.especialidades{ /* definindo tamanho */
+    margin: 40px 4%;
+}
+
+section.especialidades .flex{ /* vamos definir um espaco para as div especialidades na classe flex */
+    gap: 50px;
+}
+ 
+.especialidades .especialidades-box{ /* definindo cor */
+    color: white;
+    padding: 40px;
+    /* border: 2px solid white;  chamando a borda, tamanho e Definindo a cor */
+    margin-top: 50px; /* colocando uma distancia do titulo */
+    border-radius: 25px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.595); /* chamando alteracão do quado ao passar o mouse */
+}
+
+.especialidades .especialidades-box i{ /* modificando Itens do bootstrap */
+    font-size: 75px;
+    color: #00ff08;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+
+/* Estilo Sobre */
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 50px; 
+}
+
+.sobre .txt-sobre{
+    color: white;
+}
+
+.sobre .txt-sobre h2{
+    color: transparent;
+    font-size: 40px;
+    line-height: 40px; /* Diminuindo espaco entre linhas */
+    margin-bottom: 30px; /* aumentando espaco entre tag */
+    animation: opacity-h1 .5s ease-in forwards;
+}
+@keyframes opacity-h1 {
+    100%{
+        color: white;
+    }
+}
+
+.sobre .txt-sobre h2 span{
+    color: transparent;
+    display: block; /* Estamos realizando uma quebra de linha convertendo para block */
+    animation: opacity-span 1s ease-in forwards;
+}
+@keyframes opacity-span {
+    100%{
+        color: #00ff08;
+    }
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;  /* cima e baixo 40, e laterias 0 */
+    text-align: justify; /* ajustar o texto no campo completo  */
+}
+
+
+
+
+
+/* Estilo do portifólio */
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.38); /* 0px:horizontal, 0px:vertical  40px:desfoque  10px:sombra cor:branca */
+} 
+
+section.portifolio .flex{
+    justify-content: space-around;  /* ajusta em linha automatico sem precisar de ajuste fino */
+    margin: 50px 0;
+}
+
+.img-port{ /* Realizaremos a chamada da imagem dentro do html para dentro do background */
+    width: 360px;
+    height: 460px;
+    background-color: #00ff08;
+    background-size: cover; /* estamos adaptando o tamanho da imagem ao grid */
+    background-position: 100% 0%; /* definindo as posicões, 100%:horizontal e 0%:vertical para comecar do top */
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative; /* estamos chamando esta funcão para podermos ativar o overlay com fundo preto */
+    transition: 3s; /* aplicando o tempo de animacão ao passar o mouse */
+}
+
+.img-port:hover{
+    background-position: 100% 100%; /* vamos alterar a posicão para o final da imagem ao passar o mouse */
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a7;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    opacity: 0; /* Vamos deixar o funto preto inativo para chamarmos ao passar o mouse */
+    transition: .5s; /* tempo de alteracão da cor do overlay */
+}
+
+.overlay:hover{
+    opacity: 100% ;
+}
+
+
+
+/* Estilo Formulario */
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px; /* definindo valor fixo para não passar de 500px */
+    margin: 0 auto; /* centralizar no top */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+form input, form textarea{  /* para aplicarmos para duas classe ou tag podemos usar a " , " e realizar a chamada da classe ou tag que deseja */
+    width: 100%;
+    background-color: rgba(96, 96, 96, 0.416);
+    border: 0; /* tirando a borda da imagem */
+    outline: 0; /* estamos tirando a borda que gera ao clicar com o mouse */
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+form input::placeholder, form textarea::placeholder{ /* alterando a fonte do input */
+    color: #9fc1a1;
+}
+
+form textarea{
+    resize: none;  /* usamos para bloquear o redimencionamento */
+    height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #00ff08;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+     
+}
+
+
+
+/* Estilo Rodapé */
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.38);
+} 
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #00ff08;
+}
+
+footer .line-footer p i{
+    color: #00ff08;
+    font-size: 22px;
+    padding: 0 5px;
+}
+
+footer .line-footer p a{
+    color: white;
+}

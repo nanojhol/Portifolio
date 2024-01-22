@@ -1,0 +1,63 @@
+cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2  // 
+
+tail -f /var/lib/washngo-ole/log -n 100  // mostra as ultimas 100 linhas criadas recentes do log 
+
+
+
+
+<Instalar o teamviewer>
+
+copiar e colar o aplicativo ipscan na maquina do técnico
+após abrir o aplicativo colocar o ip da lavanderia e a
+
+
+ssh pi@192.168  // é um tipo de acesso remoto, usamos para acessar a raspberry
+
+<nmap>
+sudo apt-get install nmap -y // instala o nmap 
+nmap -p5900 xxx.xxx.x.1/24 --open // mostra quais máquinas estão na rede
+
+<teamviewer>
+sudo wget https://dl.teamviewer.com/download/linux/version_15x/teamviewer-host_15.5.6_armhf.deb
+sudo wget https://dl.teamviewer.com/download/linux/version_15x/teamviewer-host_15.31.5_armhf.deb
+sudo dpkg -i teamviewer-host_
+sudo apt-get -f install -y
+
+<Habilitar o teamviewer>
+sudo nano hbtv.py // habilitar teamviewer
+sudo python hbtv.py // habilitar teamviewer
+
+
+
+<pulso>
+sudo nano secadora.py // Criar o código e salvar (ctrl+x)
+sudo nano secadora.py // pulso Secadora 
+
+sudo nano lavagem.py // Criar o código e salvar (ctrl+x) 
+sudo python lavagem.py // chama a função
+sudo nano lavagem.py // Pulso Lavadora
+sudo python secagem.py // chama a função
+
+ssh root@192.168.xx.x // a senha pode ser pi ou x7efc4v1
+sudo passwd pi // cadastrar nova senha, pode ser x7 ou pi
+
+
+---------------------
+date --s "04 Nov 2022 13:00:00"
+sudo date --s "04 Nov 2022 13:05:00"
+
+
+----------------
+Alterar o nome da Rede 
+sudo nano /etc/hostapd/hostapd.conf
+
+
+
+já anota ai o código para verificar se o programa esta sendo executado 
+ 
+ps aux | grep python. OU  ps aux | grep sh
+ 
+Dentro da lista de código terá que ter uma  das linhas escrita a  baixo, 
+ 
+launcher_washgo.sh
+start_machine.py

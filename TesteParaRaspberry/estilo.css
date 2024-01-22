@@ -1,0 +1,75 @@
+/* Espaço da pagina */
+body{
+    margin: 0px;
+    padding: 0;
+}
+
+/* Definindo Grid */
+header {
+    background-color: #812e2e;
+    padding: 20px;
+    display: flex;  
+    justify-content: space-between;
+}
+
+/* Espaço do logo */
+header img {
+    width: 25%;
+    padding-left: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media query para tornar o header responsivo */
+@media only screen and (max-width: 675px) {
+    header img{
+        flex-direction: column;
+    }
+    nav, .tab{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .tab-content.active{
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+
+/* Estilo básico dos botões */
+nav {margin: 0; }
+
+.tab{
+    background-color: #3232325a;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 1s;
+}
+.tab-item, .tab-item:hover{
+    padding: 15px;
+}
+
+/* Adiciona um estilo diferente quando o 
+ * mouse passa por cima do item da aba */
+.tab-item:hover {
+    background-color: #627885;
+    cursor: pointer;
+}
+
+/* Estilo do conteúdo da aba */
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+/* Exibe o conteúdo da aba ativa */
+.tab-content.active {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
